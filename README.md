@@ -23,8 +23,11 @@ Open the local URL printed by Vite, usually `http://localhost:5173`.
 - `src/app` - application composition.
 - `src/components/layout` - site header and footer.
 - `src/components/sections` - shared section layout and hero.
-- `src/data` - typed portfolio content and navigation.
+- `src/data` — profile, experience, expertise, project case studies, writing and navigation content.
+- `src/components/experience` — reusable experience timeline.
+- `src/components/projects` — case study cards and lightweight architecture-flow diagrams.
 - `src/types` - shared content interfaces.
 - `src/styles` - Tailwind import and global styles.
+- `portfolio-content` — factual content review and publication verification checklist.
 
-Career and project content is intentionally omitted until confirmed and approved for publication. See `AGENTS.md` for project content and engineering rules.
+Professional content is based on the supplied resume and owner-confirmed information. See `AGENTS.md` for persistent content and engineering rules, and `portfolio-content/` for review notes before publication.

@@ -12,21 +12,45 @@ export interface NavigationItem {
   label: string
 }
 
+export interface PortfolioLinks {
+  github: string
+  linkedin: string
+  email: string
+}
+
+export interface PortfolioProfile {
+  name: string
+  currentTitle: string
+  targetRole: string
+  headline: string
+  introduction: string
+  experienceSummary: string[]
+  location: string
+  links: PortfolioLinks
+  credentials: string[]
+  education: string
+}
+
 export interface ExperienceEntry {
   organization: string
   role: string
-  startDate: string
-  endDate: string | null
-  summary: string
-  category: 'corporate'
+  period: string
+  highlights: string[]
 }
 
-export interface ProjectEntry {
+export interface ProjectCaseStudy {
   title: string
-  summary: string
+  context: string
+  problem: string
+  approach: string
+  decisions: string[]
+  considerations: string[]
+  outcomes: string[]
   technologies: string[]
-  href?: string
-  category: 'corporate' | 'independent'
+  flow?: string[]
+  secondaryFlow?: string[]
+  flowLabel?: string
+  flowIsIllustrative?: boolean
 }
 
 export interface ArticleEntry {
@@ -36,7 +60,8 @@ export interface ArticleEntry {
   publishedAt?: string
 }
 
-export interface ExpertiseGroup {
+export interface ExpertiseDomain {
   name: string
-  skills: string[]
+  summary: string
+  technologies: string[]
 }

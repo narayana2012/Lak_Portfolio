@@ -1,4 +1,6 @@
-import { ArrowDown, Layers3 } from 'lucide-react'
+import { ArrowDown, ArrowUpRight, Layers3 } from 'lucide-react'
+import { portfolioProfile } from '../../data/portfolio'
+import { SocialLinks } from '../ui/SocialLinks'
 
 export function HeroSection() {
   return (
@@ -8,22 +10,28 @@ export function HeroSection() {
         <div>
           <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-blue-100 bg-blue-50 px-3 py-1.5 text-sm font-medium text-blue-800">
             <span aria-hidden="true" className="h-2 w-2 rounded-full bg-blue-600" />
-            Data platforms · AI engineering · Architecture
+            Data &amp; AI platform architecture
           </p>
           <h1 className="max-w-3xl text-4xl font-semibold leading-tight tracking-tight text-navy sm:text-5xl lg:text-6xl" id="hero-heading">
-            Senior Staff Data &amp; AI Engineer
+            {portfolioProfile.currentTitle}
           </h1>
-          <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-600">
-            Building toward a future of Principal Data &amp; AI Engineering through thoughtful architecture and engineering.
+          <p className="mt-4 max-w-2xl text-sm font-semibold leading-6 tracking-wide text-blue-900">
+            {portfolioProfile.headline.split(' | ').slice(1).join(' · ')}
           </p>
+          <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-600">
+            {portfolioProfile.introduction}
+          </p>
+          <p className="mt-3 text-sm font-medium text-slate-600">Career direction: <span className="text-navy">{portfolioProfile.targetRole}</span></p>
           <div className="mt-9 flex flex-wrap gap-3">
             <a className="inline-flex items-center gap-2 rounded-md bg-navy px-5 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-blue-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700" href="#projects">
               Explore projects <ArrowDown aria-hidden="true" size={16} />
             </a>
-            <a className="inline-flex items-center rounded-md border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-700 transition-colors hover:border-blue-300 hover:text-blue-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700" href="#about">
-              About me
+            <a className="inline-flex items-center gap-2 rounded-md border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-700 transition-colors hover:border-blue-300 hover:text-blue-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700" href="#experience">
+              View experience <ArrowUpRight aria-hidden="true" size={16} />
             </a>
+            <a className="inline-flex items-center rounded-md px-3 py-3 text-sm font-semibold text-blue-800 hover:text-blue-950 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700" href="#contact">Contact</a>
           </div>
+          <SocialLinks className="mt-5" includeEmail={false} />
         </div>
         <div aria-hidden="true" className="hidden justify-self-center md:block">
           <div className="relative grid h-64 w-64 place-items-center rounded-3xl border border-blue-100 bg-gradient-to-br from-blue-50 to-white shadow-xl shadow-blue-950/5 lg:h-80 lg:w-80">

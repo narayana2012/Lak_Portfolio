@@ -5,6 +5,6 @@ export const navigationItems: NavigationItem[] = [
   { id: 'experience', label: 'Experience' },
   { id: 'expertise', label: 'Expertise' },
   { id: 'projects', label: 'Projects' },
-  { id: 'writing', label: 'Writing' },
+  { id: 'writing', label: 'Technical writing' },
   { id: 'github', label: 'GitHub' },
 ]
